@@ -7,10 +7,20 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
+@interface SampleClass:NSObject
+- (void)sampleMethod;
+@end
+
+@implementation SampleClass
+
+- (void)sampleMethod {
+    NSLog(@"Hello, World! \n");
+}
+
+@end
+
+int main(void) {
+    SampleClass *sampleClass = [[SampleClass alloc]init];
+    [sampleClass sampleMethod];
     return 0;
 }
